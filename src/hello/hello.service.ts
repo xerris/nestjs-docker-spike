@@ -3,7 +3,7 @@ import { Hello } from '../domain';
 
 @Injectable()
 export class HelloService {
-  hello(): object {
-    return new Hello('hi');
+  async hello(message: string): Promise<Hello> {
+    return new Hello(message);
   }
 }
