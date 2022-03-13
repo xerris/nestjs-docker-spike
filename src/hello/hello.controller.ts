@@ -6,7 +6,7 @@ export class HelloController {
   constructor(private helloService: HelloService) {}
 
   @Get()
-  hello(): string {
+  hello(): object {
     return this.helloService.hello();
   }
 }
