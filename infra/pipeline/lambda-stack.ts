@@ -48,7 +48,7 @@ pipeline.addStage({
 
 const cdkBuildProject = new codebuild.Project(pipelineStack, 'CdkBuildProject', {
   environment: {
-    buildImage: codebuild.LinuxBuildImage.UBUNTU_14_04_NODEJS_10_1_0,
+    buildImage: codebuild.LinuxBuildImage.STANDARD_5_0,
   },
   buildSpec: codebuild.BuildSpec.fromObject({
     version: '0.2',
@@ -78,7 +78,7 @@ const cdkBuildAction = new codepipeline_actions.CodeBuildAction({
 
 const lambdaBuildProject = new codebuild.Project(pipelineStack, 'LambdaBuildProject', {
   environment: {
-    buildImage: codebuild.LinuxBuildImage.UBUNTU_14_04_NODEJS_10_1_0,
+    buildImage: codebuild.LinuxBuildImage.STANDARD_5_0,
   },
   buildSpec: codebuild.BuildSpec.fromObject({
     version: '0.2',
