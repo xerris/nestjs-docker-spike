@@ -12,6 +12,11 @@ phases:
     commands:
       - echo Build started on `date`
       - npm build
+      - echo Running sests...
+      - npm test
+      - echo Starting deployment via CDK...
+      - npm run
+      - echo CDK deployment completed
   post_build:
     commands:
       - echo Build completed on `date`
